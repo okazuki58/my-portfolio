@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 mb-20">
-      <section>
+      <section id="home">
         <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
           My Portfolio
         </h1>
@@ -16,7 +16,7 @@ export default function Home() {
           これまでの経験と新たに身につけたWeb開発スキルを活かし、さまざまなプロジェクトで価値を創造していきたいと考えています。どうぞよろしくお願いいたします。
         </p>
       </section>
-      <section>
+      <section id="works">
         <h2 className="mb-8 text-2xl font-semibold tracking-tighter">Works</h2>
         <a href="http://ikki-mi.com" target="_blank" rel="noopener noreferrer">
           <div className="relative flex items-center border rounded-lg w-full overflow-hidden group">
@@ -58,7 +58,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section>
+      <section id="skills">
         <h2 className="mb-8 text-2xl font-semibold tracking-tighter">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="flex items-center gap-2">

@@ -1,101 +1,96 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col gap-16 mb-20">
+      <section>
+        <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+          My Portfolio
+        </h1>
+        <p className="mb-4 leading-loose">
+          北海道出身の Kazuki Ogawa
+          と申します。高校卒業後、調理師としてレストラン業界に入り、北海道や東京の複数のレストランで計6年間勤務しました。その中で、業務の効率化や新たな技術の導入に興味を持ち、ITやテクノロジーがビジネスの成長をサポートする方法に関心を抱くようになりました。
+          <br />
+          <br />
+          このような背景から、より広い視野で課題解決に取り組むため、Web開発業界への転職を決意しました。現在、24歳で、技術とビジネスの橋渡し役として活躍できるエンジニアを目指しています。特に、ユーザーのニーズを理解し、ビジネスの視点から技術的な解決策を提供することに興味を持っています。
+          <br />
+          <br />
+          これまでの経験と新たに身につけたWeb開発スキルを活かし、さまざまなプロジェクトで価値を創造していきたいと考えています。どうぞよろしくお願いいたします。
+        </p>
+      </section>
+      <section>
+        <h2 className="mb-8 text-2xl font-semibold tracking-tighter">Works</h2>
+        <a href="http://ikki-mi.com" target="_blank" rel="noopener noreferrer">
+          <div className="relative flex items-center border rounded-lg w-full overflow-hidden group">
+            <div className="absolute inset-0 bg-slate-300 opacity-0 group-hover:opacity-25 transition-opacity duration-300 ease-in-out cursor-pointer"></div>
+            <div className="flex flex-col flex-grow gap-1 p-4">
+              <h3 className="text-lg font-semibold tracking-tighter">Ikkimi</h3>
+              <p className="text-xs text-gray-500">
+                オンラインでマンガ本棚がつくれるWebアプリ
+              </p>
+              <div className="flex items-center gap-2">
+                <img src="/logo-2.svg" alt="ikkimi" className="w-3" />
+                <p className="text-sm text-gray-800">ikki-mi.com</p>
+              </div>
+            </div>
+            <div className="h-full w-2/5 flex-none">
+              <picture className="h-full w-full">
+                <source srcSet="/sq-image.png" media="(max-width: 640px)" />
+                <img
+                  src="/rec-image.png"
+                  alt="ikkimi"
+                  className="h-full w-full object-cover"
+                />
+              </picture>
+            </div>
+          </div>
+        </a>
+        <p className="text-sm mt-4 leading-loose">
+          Next.jsの勉強で作ったWebアプリケーションです。制作には1ヶ月半ほどかかりました。TailwindCSSやTypeScript,
+          Supabaseを使い、ログイン機能も実装しました。 詳しくは「
+          <a
+            href="https://zenn.dev/0221/articles/1ac0c9de1b0c72"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            オンラインで自分だけのマンガ本棚を公開できるサービスをつくりました
+          </a>
+          」で紹介していますので、よければそちらもご覧ください。
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section>
+        <h2 className="mb-8 text-2xl font-semibold tracking-tighter">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="flex items-center gap-2">
+            <i className="devicon-javascript-plain text-xl"></i>
+            <p className="text-base font-normal">JavaScript</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-react-original text-xl"></i>
+            <p className="text-base font-normal">React</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-typescript-plain text-xl"></i>
+            <p className="text-base font-normal">TypeScript</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-nodejs-plain text-xl"></i>
+            <p className="text-base font-normal">Node.js</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-tailwindcss-plain text-xl"></i>
+            <p className="text-base font-normal">Tailwind CSS</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-github-original text-xl"></i>
+            <p className="text-base font-normal">GitHub</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="devicon-figma-plain text-xl"></i>
+            <p className="text-base font-normal">Figma</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
     </div>
   );
 }
